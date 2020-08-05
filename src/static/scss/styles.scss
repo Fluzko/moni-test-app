@@ -1,0 +1,64 @@
+$blue:#07abee;
+
+.banner{
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner-home.jpg") no-repeat center center;
+
+  height: 650px;
+  .content{
+    text-align: center;
+    h1{
+      margin-top: 250px;
+      color: $blue;
+      font-size: 80px;
+      letter-spacing: 2px;
+    }
+    h3{
+      margin-top: 20px;
+      font-size: 60px;
+      letter-spacing: 2px;
+      color: white;
+    }
+  }
+}
+
+.solicitud{
+  margin: 40px 0 40px 0;
+  .content{
+    background-color: $blue;
+    border-radius: 60px;
+    h2{
+      padding: 40px 0 0 40px;
+      font-size: 40px;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+    form{
+      padding: 40px;
+      label{
+        color: white;
+        font-weight: bold;
+      }
+      .submit-btn{
+        text-align: center;
+        input{
+          height: 60px;
+          width: 200px;
+          background-color: white;
+          border-radius: 60px;
+        }
+      }
+    }
+  }
+}
+
+.admin-btn{
+  margin: 30px 0 30px 0;
+  button{
+    font-size: 40px;
+    //width: 300px;
+    padding: 0 30px;
+    border-radius: 60px;
+  }
+}

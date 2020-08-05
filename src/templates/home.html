@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container-fluid">
+    <!-- Banner -->
+    <div class="row banner">
+      <div class="col-2"></div>
+      <div class="col-8 content">
+        <h1>MONI</h1>
+        <h3>Pedi tu prestamo online</h3>
+      </div>
+      <div class="col-2"></div>
+    </div>
+
+    <div class="admin-btn text-center">
+      <a href="login">
+        <button type="button" class="btn btn-dark">Administradores</button>
+      </a>
+    </div>
+
+    <!-- Form -->
+    <div class="row solicitud" id="loan">
+      <div class="col-3"></div>
+      <div class="col-6 content">
+        <h2>Solicitar credito</h2>
+        {% include "alert.html" %}
+        <form method="POST" action="">
+          {{ form.hidden_tag() }}
+          <div class="form-group">
+            {{ form.nombre.label(class="form-control-label") }}
+              {% if form.nombre.errors %}
+                  {{ form.nombre(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.nombre.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.nombre(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+
+          <div class="form-group">
+            {{ form.apellido.label(class="form-control-label") }}
+              {% if form.apellido.errors %}
+                  {{ form.apellido(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.apellido.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.apellido(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+          <div class="form-group">
+            {{ form.dni.label(class="form-control-label") }}
+              {% if form.dni.errors %}
+                  {{ form.dni(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.dni.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.dni(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+          <div class="form-group">
+            {{ form.genero.label(class="form-control-label") }}
+              {% if form.genero.errors %}
+                  {{ form.genero(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.genero.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.genero(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+
+          <div class="form-group">
+            {{ form.email.label(class="form-control-label") }}
+              {% if form.email.errors %}
+                  {{ form.email(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.email.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.email(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+
+          <div class="form-group">
+            {{ form.monto.label(class="form-control-label") }}
+              {% if form.monto.errors %}
+                  {{ form.monto(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.monto.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.monto(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+          <div class="submit-btn">
+            {{ form.submit(class="btn") }}
+          </div>
+        </form>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block content %}
+  {% include "admin_navbar.html" %}
+  <div class="container-fluid">
+    <!-- Form -->
+    <div class="row solicitud">
+      <div class="col-3"></div>
+      <div class="col-6 content">
+        <h2>Editar</h2>
+        <form action="" method="POST">
+          {{ form.hidden_tag() }}
+          <div class="form-group">
+            {{ form.nombre.label(class="form-control-label") }}
+              {% if form.nombre.errors %}
+                  {{ form.nombre(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.nombre.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.nombre(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+
+          <div class="form-group">
+            {{ form.apellido.label(class="form-control-label") }}
+              {% if form.apellido.errors %}
+                  {{ form.apellido(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.apellido.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.apellido(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+
+          <div class="form-group">
+            {{ form.dni.label(class="form-control-label") }}
+              {% if form.dni.errors %}
+                  {{ form.dni(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.dni.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.dni(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+
+
+          <div class="form-group">
+            {{ form.genero.label(class="form-control-label") }}
+              {% if form.genero.errors %}
+                  {{ form.genero(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.genero.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.genero(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+
+          <div class="form-group">
+            {{ form.email.label(class="form-control-label") }}
+              {% if form.email.errors %}
+                  {{ form.email(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.email.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.email(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+
+          <div class="form-group">
+            {{ form.monto.label(class="form-control-label") }}
+              {% if form.monto.errors %}
+                  {{ form.monto(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.monto.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.monto(class="form-control form-control-lg") }}
+              {% endif %}
+          </div>
+
+          <div class="submit-btn">
+            {{ form.submit(class="btn btn-outline-info") }}
+          </div>
+        </form>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+{% endblock %}

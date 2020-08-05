@@ -1,0 +1,62 @@
+.banner {
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner-home.jpg") no-repeat center center;
+  height: 650px;
+}
+.banner .content {
+  text-align: center;
+}
+.banner .content h1 {
+  margin-top: 250px;
+  color: #07abee;
+  font-size: 80px;
+  letter-spacing: 2px;
+}
+.banner .content h3 {
+  margin-top: 20px;
+  font-size: 60px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.solicitud {
+  margin: 40px 0 40px 0;
+}
+.solicitud .content {
+  background-color: #07abee;
+  border-radius: 60px;
+}
+.solicitud .content h2 {
+  padding: 40px 0 0 40px;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.solicitud .content form {
+  padding: 40px;
+}
+.solicitud .content form label {
+  color: white;
+  font-weight: bold;
+}
+.solicitud .content form .submit-btn {
+  text-align: center;
+}
+.solicitud .content form .submit-btn input {
+  height: 60px;
+  width: 200px;
+  background-color: white;
+  border-radius: 60px;
+}
+
+.admin-btn {
+  margin: 30px 0 30px 0;
+}
+.admin-btn button {
+  font-size: 40px;
+  padding: 0 30px;
+  border-radius: 60px;
+}
+
+/*# sourceMappingURL=styles.css.map */
